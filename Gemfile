@@ -19,6 +19,8 @@ gem 'uglifier', '>= 1.3.0'
 #bootstrap
 gem 'bootstrap-sass'
 # Use CoffeeScript for .coffee assets and views
+gem 'jquery-rails'
+gem 'bcrypt',platforms: :ruby
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
@@ -33,7 +35,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'devise'
 gem 'devise-i18n'
-gem 'jquery-rails'
+gem 'paperclip'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
