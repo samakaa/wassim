@@ -13,11 +13,11 @@ data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <div id="navbar" class="navbar-collapse collapse right">
           <ul class="nav navbar-nav navbar-right">
             <% if (!user_signed_in?) %>
-            <button type="button" class="btn btn-default navbar-btn">
-                  <li><%= link_to 'Inscription', new_user_registration_path %></li>  </button>
-                <button type="button" class="btn btn-default navbar-btn">
+
+                  <li><%= link_to 'Inscription', new_user_registration_path %></li>
+          
                   <li><%= link_to 'Connexion', new_user_session_path %></li>
-  </button>
+
             <% else %>
 
                 <li class="dropdown">
