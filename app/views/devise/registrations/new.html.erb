@@ -17,6 +17,9 @@
                 <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder:"crée un ot de passe" %>
               </div>
 
+              <div class="form-group">
+                <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder:"confirmer votre mot de passe" %>
+              </div>
 
               <div class="actions">
                 <%= f.submit "Inscription", class: "btn btn-primary" %>
