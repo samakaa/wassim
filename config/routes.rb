@@ -7,5 +7,5 @@ Rails.application.routes.draw do
 root 'pages#home'
 # chemin d'accès de la méthode show du controller User
 resources :users, only: [:show]
-
+resources :rooms
 end
