@@ -3,10 +3,7 @@
 @import "toastr";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-.exemple {
-  text-align: center;
-  border: solid;
-}
+
 .avatar-small {
 
       width: 28px;
@@ -378,3 +375,121 @@ input[type="checkbox"]:checked:before {
  color: #ff5a5f;
 
  }
+ .panel-heading.preview {
+
+          padding: 0;
+
+  }
+
+
+ .panel-heading.preview img{
+           width: 100%;
+
+  }
+  .equipments li {
+          margin-bottom: 10px;
+          list-style-type: none;
+  }
+   .text-line-through {
+        text-decoration: line-through
+   }
+   .reservation-table td {
+
+          width: 100%;
+
+          border: 1px solid #dce0e0;
+
+          padding: 10px;
+
+   }
+
+
+   .wide {
+
+    width: 100%;
+
+    }
+
+
+   .price_tag {
+
+          background-color: #606567;
+
+          color: #fff;
+
+          font-size: 20px;
+
+          padding: 10px;
+
+          margin-bottom: 10px;
+
+    }
+
+    .home-link a, p{
+
+         color: #82888a;
+
+         text-decoration: none;
+
+     }
+
+
+    .home-link:hover a, .home-link:focus a {
+
+         color: #82888a;
+
+         text-decoration: none;
+
+     }
+
+#wrapper {
+
+      width:960px;
+
+      margin:0 auto;
+
+ }
+
+
+#sidebar {
+
+      float:right;
+
+      width:340px;
+
+ }
+
+
+#sidebar #widget {
+
+      width:340px;
+
+      height: 600px;
+
+      margin-bottom:10px;
+
+      border-bottom:1px solid #ccc;
+
+ }
+
+
+#article {
+
+      width:560px;
+
+ }
+
+
+ .conversation {
+
+        color: #7f7f7f;
+
+        padding: 10px;
+
+  }
+
+  .conversation:hover, .conversation:focus {
+
+      background-color: #F4F4F5;
+
+  } 
