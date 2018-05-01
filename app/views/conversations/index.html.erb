@@ -11,7 +11,7 @@
                 <div class="container">
 
                     <% @conversations.each do |conversation| %>
-                           <br>
+
                     <% other = conversation.sender == current_user ? conversation.recipient : conversation.sender %>
 
                     <%= link_to conversation_messages_path(conversation) do %>
@@ -26,7 +26,7 @@
 
                                <div class="col-md-2">
 
-                                    <%= other.fullname %><br>
+                                    <%= other.fullname %>
 
                        <%= timeago_tag conversation.messages.last.created_at, :lang => :fr %>
                                </div>
@@ -36,7 +36,7 @@
                                     <%= conversation.messages.last.content %>
 
                            </div>
-
+                       <br>
                      <% end %>
 
                <% end %>
