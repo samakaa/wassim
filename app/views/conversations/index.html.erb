@@ -12,10 +12,10 @@
 
                     <% @conversations.each do |conversation| %>
 
-                    <% other = conversation.sender == current_user ? conversation.recipient : conversation.sender %> 
+                    <% other = conversation.sender == current_user ? conversation.recipient : conversation.sender %>
 
                     <%= link_to conversation_messages_path(conversation) do %>
-
+                                   <br>
                           <div class="row conversation">
 
                                <div class="col-md-2">
