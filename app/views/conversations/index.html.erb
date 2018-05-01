@@ -11,7 +11,7 @@
                 <div class="container">
 
                     <% @conversations.each do |conversation| %>
-
+                             <br>
                     <% other = conversation.sender == current_user ? conversation.recipient : conversation.sender %>
 
                     <%= link_to conversation_messages_path(conversation) do %>
@@ -23,7 +23,7 @@
                                    <%= image_tag avatar_url(other), class: "img-circle avatar-medium" %>
 
                                </div>
-
+                            <br>
                                <div class="col-md-2">
 
                                     <%= other.fullname %><br>
