@@ -11,7 +11,7 @@
                 <div class="container">
 
                     <% @conversations.each do |conversation| %>
-
+                           <br>
                     <% other = conversation.sender == current_user ? conversation.recipient : conversation.sender %>
 
                     <%= link_to conversation_messages_path(conversation) do %>
@@ -42,10 +42,10 @@
                <% end %>
 
            </div>
-           <br>
+
 
         </div>
-    <br>
+
      </div>
 
     </div>
