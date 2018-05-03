@@ -31,10 +31,7 @@ def create
 
              redirect_to @reservation.room, notice: "Votre réservation a été acceptée"
 
-       
-
-      redirect_to @reservation.room, notice:  "Votre réservation a été acceptée"
-     end
+       end
 end
      def your_trips
 
