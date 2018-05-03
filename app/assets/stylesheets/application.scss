@@ -4,6 +4,24 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+.text-center h1{
+  font-size: 60px;
+color: rgba(255, 255, 255,.1);
+background-image: url(color.jpg);
+background-repeat: repeat-x;
+-webkit-background-clip:text;
+animation: animate 15s linear infinite;
+font-family: Brush Script MT, Brush Script Std, cursive;
+}
+@keyframes animate{
+  0%{
+    background-position: left 0px top 10px;
+  }
+  40%{
+    background-position: left 800px top 10px;
+  }
+}
+
 .avatar-small {
 
       width: 28px;
@@ -492,4 +510,4 @@ input[type="checkbox"]:checked:before {
 
       background-color: #F4F4F5;
 
-  } 
+  }
