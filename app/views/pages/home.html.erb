@@ -45,7 +45,10 @@
             </div>
         </div>
     <% end %>
+
+
 </div>
+  <center><%= will_paginate @rooms, renderer: BootstrapPagination::Rails, previous_label: "Précédent",next_label:"Suivant" %></center>
 <script>
     $(function() {
         $('#start_date').datepicker({
