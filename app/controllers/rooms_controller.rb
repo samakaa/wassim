@@ -94,7 +94,7 @@ redirect_to edit_room_path(@room), notice:"Votre logement a été ajouté"
 
           params.require(:room).permit(:home_type, :room_type, :accommodate, :bed_room, :bath_room,
                                        :listing_name, :summary, :address, :is_wifi, :is_tv, :is_closet,
-                                       :is_shampoo, :is_breakfast, :is_heating, :is_air, :is_kitchen, :price,
+                                       :is_shampoo, :is_swimming_pool, :is_heating, :is_air, :is_kitchen, :price,
                                        :active)
 
      end

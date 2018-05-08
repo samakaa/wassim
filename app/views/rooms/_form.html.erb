@@ -12,7 +12,7 @@
                         <div class="form-group">
                             <label>Genre d'habitation</label>
                             <%= f.select :home_type, [["Maison","Maison"], ["Appartement","Appartement"],
-                            ["Bed & Breakfast", "Bed & Breakfast"]], id: "home_type",
+                            ["villa", "villa"]], id: "home_type",
                             prompt: "A sélectionner...", class: "form-control" %>
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                     </div>
 
                     <div class="form-group">
-                        <%= f.check_box :is_breakfast %> Petit déjeuner, café, thé
+                        <%= f.check_box :is_swimming_pool %> picine
                     </div>
 
                     <div class="form-group">

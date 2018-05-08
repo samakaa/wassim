@@ -13,7 +13,7 @@ class CreateRooms < ActiveRecord::Migration[5.1]
       t.boolean :is_tv
       t.boolean :is_closet
       t.boolean :is_shampoo
-      t.boolean :is_breakfast
+      t.boolean :is_swimming_pool
       t.boolean :is_heating
       t.boolean :is_air
       t.boolean :is_kitchen
