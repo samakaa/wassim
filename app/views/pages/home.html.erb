@@ -1,7 +1,8 @@
+
 <div class="row">
-    <div class="col-md-8">
-        <div class="text-center">
-            <h1>Réservez des logements uniques et vivez votre destination comme un habitant.</h1>
+    <div class="col-md-10">
+          <div class="text-center">
+            <h1>Réservez des logements uniques et vivez votre destination comme un habitant</h1>
         </div>
     </div>
 </div>
@@ -28,9 +29,9 @@
 <br>
 <div class="row">
     <div class="col-md-4">
-        <h4>Logements</h4>
+        <h1>Logements</h1>
     </div>
-</div>
+</div
 <div class="row">
     <% @rooms.each do |room| %>
         <div class="col-md-4">
@@ -50,6 +51,7 @@
 </div>
   <center><%= will_paginate @rooms, renderer: BootstrapPagination::Rails, previous_label: "Précédent",next_label:"Suivant" %></center>
 <script>
+
     $(function() {
         $('#start_date').datepicker({
                     dateFormat: 'dd-mm-yy',
@@ -77,3 +79,4 @@
                     }
         });
     })
+</script>
