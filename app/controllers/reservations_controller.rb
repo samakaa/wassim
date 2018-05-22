@@ -21,18 +21,39 @@ def preload
    end
 
 
-def create
+   def create
+        @reservation = current_user.reservations.create(reservation_params)
 
-      @reservation = current_user.reservations.create(reservation_params)
+        if @reservation.persisted?
+            @payment = Payment.new({email: User.find(@reservation.user_id).email,
+                token: params[:payment]["token"], reservation_id: @reservation.id,
+                amount: @reservation.total
+            })
 
-      if @reservation.save
+        begin
+        @payment.process_payment
 
-             AppMailer.new_reservation(Room.find(@reservation.room_id), @reservation).deliver_now
+        if @payment.save
+            AppMailer.new_reservation(Room.find(@reservation.room_id), @reservation).deliver_now
+            redirect_to @reservation.room, notice: "Votre réservation a été acceptée"
+        end
 
-             redirect_to @reservation.room, notice: "Votre réservation a été acceptée"
+        rescue Exception
 
-       end
-end
+        @reservation.destroy
+
+        puts 'Le paiement a échoué'
+
+        redirect_to @reservation.room, notice: "Votre paiement a été rejeté"
+        end
+
+        else
+            redirect_to @reservation.room, notice: "Votre réservation a échoué"
+
+
+        end
+
+    end
      def your_trips
 
             @trips = current_user.reservations
@@ -47,7 +68,7 @@ end
 private
 
      def reservation_params
-        params.require(:reservation).permit(:start_date, :end_date, :price, :total, :room_id)
+        params.require(:reservation).permit(:start_date, :end_date, :price, :total, :room_id, :payment)
      end
 private
         def is_conflict(start_date, end_date)
