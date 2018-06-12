@@ -1,4 +1,5 @@
 class Room < ApplicationRecord
+  paginates_per 3
   belongs_to :user #une annonce de la table room appartient à un seul et unique utilisateur de la table user
  has_many :photos
  has_many :reservations
