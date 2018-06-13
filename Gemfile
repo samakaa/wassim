@@ -16,9 +16,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'activeadmin'
-gem 'active_admin_theme'
-
 #bootstrap
 gem 'bootstrap-sass'
 # Use CoffeeScript for .coffee assets and views
@@ -47,10 +44,8 @@ gem 'jquery-ui-rails'
 gem 'ransack'
 gem 'rails-timeago'
 gem 'paperclip-cloudinary'
-#gem 'will_paginate'
-#gem 'will_paginate-bootstrap'
-gem 'kaminari'
-
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'stripe'

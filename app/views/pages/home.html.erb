@@ -72,10 +72,8 @@
     <div class="col-md-4">
         <h1>Logements</h1>
     </div>
-</div>
-
+</div
 <div class="row">
-
     <% @rooms.each do |room| %>
         <div class="col-md-4">
             <div class="panel panel-default">
@@ -92,9 +90,7 @@
 
 
 </div>
-
-<%= paginate @rooms %>
-
+  <center><%= will_paginate @rooms, renderer: BootstrapPagination::Rails, previous_label: "Précédent",next_label:"Suivant" %></center>
 <script>
 
     $(function() {

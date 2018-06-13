@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
     def home
-      @rooms = Room.order("RANDOM()").page(params[:page])
+      @rooms = Room.order("RANDOM()").paginate(:page => params[:page], :per_page => 3)
     end
     def search
           if params[:search].present? && params[:search].strip != ""
