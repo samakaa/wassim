@@ -34,11 +34,11 @@ class ReservationsController < ApplicationController
         @payment.process_payment
 
         if @payment.save
-
+          AppMailer.new_reservation(Room.find(@reservation.room_id), @reservation).deliver_now
+          redirect_to @reservation.room, notice: "Votre réservation a été acceptée"
 
         end
-        AppMailer.new_reservation(Room.find(@reservation.room_id), @reservation).deliver_now
-        redirect_to @reservation.room, notice: "Votre réservation a été acceptée"
+
 
 
         rescue Exception
