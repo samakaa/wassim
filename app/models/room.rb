@@ -1,8 +1,8 @@
 class Room < ApplicationRecord
-  belongs_to :user #une annonce de la table room appartient à un seul et unique utilisateur de la table user
- has_many :photos
- has_many :reservations
- has_many :reviews
+  belongs_to :user#une annonce de la table room appartient à un seul et unique utilisateur de la table user
+ has_many :photos, dependent: :destroy
+ has_many :reservations, dependent: :destroy
+ has_many :reviews, dependent: :destroy
                  validates :home_type, presence: true
 
                  validates :room_type, presence: true

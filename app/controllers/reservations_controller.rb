@@ -25,7 +25,7 @@ class ReservationsController < ApplicationController
         @reservation = current_user.reservations.create(reservation_params)
 
         if @reservation.persisted?
-            @payment = Payment.new({email: User.find(@reservation.user_id).email,
+            @payment = Payment.new({ email: User.find(@reservation.user_id).email,
                 token: params[:payment]["token"], reservation_id: @reservation.id,
                 amount: @reservation.total
             })
@@ -38,6 +38,7 @@ class ReservationsController < ApplicationController
           redirect_to @reservation.room, notice: "Votre réservation a été acceptée"
 
         end
+
 
 
 

@@ -44,11 +44,13 @@ gem 'jquery-ui-rails'
 gem 'ransack'
 gem 'rails-timeago'
 gem 'paperclip-cloudinary'
-gem 'will_paginate'
-gem 'will_paginate-bootstrap'
+gem 'coffee-script-source', '1.8.0'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'stripe'
+gem 'activeadmin'
+gem 'active_admin_theme'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
