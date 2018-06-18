@@ -4,7 +4,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Location"
+  config.site_title = "CoinLocation"
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
@@ -91,7 +91,7 @@ ActiveAdmin.setup do |config|
   # == Logging Out
   #
   # Active Admin displays a logout link on each screen. These
-  # settings configure the location and method used for the link.
+  # settings configure the CoinLocation and method used for the link.
   #
   # This setting changes the path where the link points to. If it's
   # a string, the strings is used as the path. If it's a Symbol, we
