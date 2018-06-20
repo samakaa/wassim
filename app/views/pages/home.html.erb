@@ -74,7 +74,7 @@
     </div>
 </div
 <div class="row">
-    <% @rooms.each_slice(2) do |group| %>
+    <% @rooms.each_slice(3) do |group| %>
         <div class="col-md-4">
           <% group.each do |room | %>
               <div class="panel panel-default">
@@ -86,7 +86,7 @@
                       <br><%= link_to room.listing_name, room_path(room) %></p>
                   </div>
               </div>
-          <% end %>  
+          <% end %>
         </div>
     <% end %>
 
