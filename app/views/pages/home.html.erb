@@ -74,17 +74,19 @@
     </div>
 </div
 <div class="row">
-    <% @rooms.each do |room| %>
+    <% @rooms.each_slice(2) do |group| %>
         <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading preview">
-                    <%= image_tag room.photos[0].image.url(:medium) if room.photos.length > 0 %>
-                </div>
-                <div class="panel-body">
-                    <p class="home-link"><b><%= link_to room.price, room_path(room) %> TND - <%= link_to room.room_type, room_path(room) %> - <%= link_to pluralize(room.bed_room, "lit"), room_path(room) %></b>
-                    <br><%= link_to room.listing_name, room_path(room) %></p>
-                </div>
-            </div>
+          <% group.each do |room | %>
+              <div class="panel panel-default">
+                  <div class="panel-heading preview">
+                      <%= image_tag room.photos[0].image.url(:medium) if room.photos.length > 0 %>
+                  </div>
+                  <div class="panel-body">
+                      <p class="home-link"><b><%= link_to room.price, room_path(room) %> TND - <%= link_to room.room_type, room_path(room) %> - <%= link_to pluralize(room.bed_room, "lit"), room_path(room) %></b>
+                      <br><%= link_to room.listing_name, room_path(room) %></p>
+                  </div>
+              </div>
+          <% end %>  
         </div>
     <% end %>
 
