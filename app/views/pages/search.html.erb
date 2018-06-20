@@ -139,9 +139,9 @@
                     <% if @arrRooms.empty? %>
                         Aucune annonce ne correpond à votre recherche.
                     <% else %>
-                        <% @arrRooms.each do |group| %>
+                        <% @arrRooms.each_slice(2) do |group| %>
                         <div class="col-md-4">
-                          <% group.each do |room | %>
+                          <% group.each do |room| %>
                                 <div class="panel panel-default">
                                     <div class="panel-heading preview">
                                         <%= image_tag room.photos[0].image.url(:medium) if room.photos.length > 0 %>
