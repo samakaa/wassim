@@ -10,7 +10,7 @@ Rails.application.configure do
 
    config.action_mailer.delivery_method = :smtp
 
- config.action_mailer.default_url_options = { :host => 'wassilaa.herokuapp.com', :protocol => 'https'}
+ config.action_mailer.default_url_options = { :host => 'coinlocation.herokuapp.com', :protocol => 'https'}
 
   # Settings specified here will take precedence over those in config/application.rb.
 
