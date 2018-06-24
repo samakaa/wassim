@@ -15,7 +15,9 @@
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-3 text-center">
+                       <%= link_to user_path(@room.user) do %>
                         <%= image_tag avatar_url(@room.user), class:"img-circle avatar-large" %>
+                        <% end %>
                         <br>
                         <br>
                         <%= @room.user.fullname %>
@@ -188,7 +190,7 @@
                 </script>
 
                 <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVi2vJxXa_fXPkzzZw9qMfjBJzNdgCPGQ&callback=initMap">
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBWzH7VJTGL_5cQgGVBi7wqDc-BhQRLeY&callback=initMap">
                 </script>
             </div>
         </div>
