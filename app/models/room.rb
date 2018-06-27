@@ -1,5 +1,5 @@
 class Room < ApplicationRecord
-  belongs_to :user#une annonce de la table room appartient à un seul et unique utilisateur de la table user
+  belongs_to :user
  has_many :photos, dependent: :destroy
  has_many :reservations, dependent: :destroy
  has_many :reviews, dependent: :destroy
@@ -19,7 +19,8 @@ class Room < ApplicationRecord
 
                  validates :address, presence: true
 
-                 validates :price, numericality: { only_integer: true, greater_than: 5 } #accepte seulement des entiers supérieurs à 5 dt (de type numerique)
+                 validates :price, numericality: { only_integer: true, greater_than: 5 }
+
                  geocoded_by :address
 
 

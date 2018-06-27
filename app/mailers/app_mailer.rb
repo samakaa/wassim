@@ -9,7 +9,7 @@ def new_reservation(room, reservation)
 
        @room = room
 
- mail(from: '"wassim.com"<no-reply@wassim.com>', to: @user.email, subject: "Nouvelle réservation !")
+ mail(from: '"CoinLocation"<no-reply@CoinLocation.com>', to: @user.email, subject: "Nouvelle réservation !")
 
  end
 

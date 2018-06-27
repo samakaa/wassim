@@ -18,14 +18,20 @@
                         <div class="panel-heading">Vérification</div>
 
                                 <div class="panel-body">
+                                 <i class="fa fa-envelope-o"></i>
                                   <% if @user.confirmed_at %>
 
                                    Email confirmé
+                                   <br>
+                                   <hr>
+                                   <span class="glyphicon glyphicon-earphone one"></span> <%= @user.phone_number %>
 
                                    <% else %>
 
-                                   Email non confirmé
-
+                                   <i class="glyphicon glyphicon-envelope"></i> Email non confirmé
+                                   <br>
+                                   <hr>
+                                   <span class="glyphicon glyphicon-earphone one"></span> <%= @user.phone_number %>
                                    <% end %>
                                 </div>
 

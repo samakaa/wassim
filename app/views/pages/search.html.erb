@@ -112,7 +112,7 @@
                             <%= check_box_tag "q[is_kitchen_eq]", true %> Cuisine
                         </div>
                         <div class="col-md-4">
-                            <%= check_box_tag "q[is_swimming_pool_eq]", true %> picine
+                            <%= check_box_tag "q[is_swimming_pool_eq]", true %> piscine
                         </div>
                         <div class="col-md-4">
                             <%= check_box_tag "q[is_heating_eq]", true %> Chauffage
@@ -139,7 +139,7 @@
                     <% if @arrRooms.empty? %>
                         Aucune annonce ne correpond à votre recherche.
                     <% else %>
-                        <% @arrRooms.each_slice(3) do |group| %>
+                        <% @arrRooms.each_slice(1) do |group| %>
                         <div class="col-md-6">
                           <% group.each do |room| %>
                                 <div class="panel panel-default">

@@ -19,7 +19,7 @@
 
          <label>Départ</label>
 
-         <%= f.text_field :end_date, readonly: 'true', placeholder: 'jj/mm/aaaa', class: 'form-control' %>
+         <%= f.text_field :end_date, readonly: 'true', placeholder: 'jj/mm/aaaa', class: 'form-control',disabled: 'true' %>
 
          </div>
  </div>
@@ -174,7 +174,7 @@
                                         $('#preview').show();
                                         $('#btn_book').attr('disabled', false);
 
-                                        var total = days * <%= @room.price %>
+                                        var  total = days * <%= @room.price %>
                                         $('#reservation_days').text(days);
                                         $('#reservation_sum').text(total);
                                         $('#reservation_total').val(total);
@@ -224,7 +224,7 @@
                                         $('#preview').show();
                                         $('#btn_book').attr('disabled', false);
 
-                                        var total = days * <%= @room.price %>
+                                        var  total = days * <%= @room.price %>
                                         $('#reservation_days').text(days);
                                         $('#reservation_sum').text(total);
                                         $('#reservation_total').val(total);

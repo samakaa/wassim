@@ -43,7 +43,7 @@ $(".cc_form").on('submit', submitHandler);
 
               if (response.error.type == 'card_error' ){
 
-              $('#stripe').text("Numéro de carte bleue invalide.");
+              $('#stripe').text("Numéro de carte credit invalide.");
 
               }
 
