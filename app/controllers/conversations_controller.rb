@@ -3,7 +3,6 @@ class ConversationsController < ApplicationController
     before_action :authenticate_user!
 
     def index
-       @users = User.all
        @conversations = Conversation.involving(current_user)
     end
 
@@ -19,7 +18,7 @@ class ConversationsController < ApplicationController
 
    private
    def conversation_params
-      params.permit(:sender_id, :recipient_id)
+      params.require(:conversation).permit(:sender_id, :recipient_id)
    end
 
 end
