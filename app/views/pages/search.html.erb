@@ -147,7 +147,7 @@
                                         <%= image_tag room.photos[0].image.url(:medium) if room.photos.length > 0 %>
                                     </div>
                                     <div class="panel-body">
-                                        <%= image_tag avatar_url(room.user), class:"img-circle avatar-small" %>
+                                        <p class="home-link"><b>   <%= image_tag avatar_url(room.user), class:"img-circle avatar-small" %>
                                         <%= link_to room.listing_name, room %>
                                     </div>
                                 </div>
